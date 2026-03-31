@@ -1,0 +1,132 @@
+/* Gesamtes Seitenlayout */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #1a1a1a; /* Dunkler Hintergrund als Fallback */
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://images.unsplash.com/photo-1551041777-ed277b8dd348?q=80&w=1888&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+    filter: brightness(70%);
+    z-index: -1;
+}
+
+/* Karte in der Mitte */
+.card {
+    background-color: rgba(255, 255, 255, 0.95);
+    color: #333;
+    width: 350px;
+    padding: 30px;
+    border-radius: 15px; /* Abrundung der Ecken */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out; /* Übergangseffekt */
+}
+
+.card h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="time"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #f9f9f9;
+    transition: border-color 0.3s;
+}
+
+.form-group input[type="time"]:focus {
+    border-color: #007bff;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px; /* Abrundung der Ecken */
+    background: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, background-color 0.3s ease;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+button:active {
+    transform: scale(1.1); /* Button vergrößert sich beim Klicken */
+}
+
+/* Timeline-Liste */
+.timeline {
+    list-style: none;
+    margin: 20px 0 0;
+    padding: 0;
+    position: relative;
+}
+
+.timeline li {
+    position: relative;
+    margin-bottom: 25px;
+    padding-left: 40px; /* Platz für die Linie und den Kreis */
+}
+
+.timeline li::before {
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #007bff;
+}
+
+.timeline li::after {
+    content: "";
+    position: absolute;
+    left: 10px;
+    width: 14px;
+    height: 14px;
+    background: #007bff;
+    border-radius: 50%;
+    top: 0;
+    transform: translateY(-50%);
+}
+
+.time {
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 4px;
+}
+
+.description {
+    color: #333;
+}

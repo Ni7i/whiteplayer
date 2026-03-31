@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nacht-Rechner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Hintergrundbild / Hintergrund -->
+  <div class="background"></div>
+
+  <!-- Hauptkarte -->
+  <div class="card">
+    <h2>Nacht-Rechner</h2>
+
+    <!-- Eingabefelder -->
+    <div class="form-group">
+      <label for="fajr">Fajr (Morgendämmerung):</label>
+      <input type="time" id="fajr" required>
+    </div>
+    <div class="form-group">
+      <label for="maghrib">Maghrib (Sonnenuntergang):</label>
+      <input type="time" id="maghrib" required>
+    </div>
+
+    <!-- Button -->
+    <button onclick="berechneNacht()">Berechnen</button>
+
+    <!-- Ergebnis-Timeline -->
+    <ul class="timeline" id="timeline"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
