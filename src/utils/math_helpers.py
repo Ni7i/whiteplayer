@@ -56,3 +56,19 @@ def combination(n: int, r: int) -> int:
     if r > n or r < 0:
         return 0
     return factorial(n) // (factorial(r) * factorial(n - r))
+
+def factorial(n: int) -> int:
+    """Calculate factorial iteratively."""
+    if n < 0:
+        raise ValueError("Factorial not defined for negative numbers")
+    result = 1
+    for i in range(2, n + 1):
+        result *= i
+    return result
+
+
+def combination(n: int, r: int) -> int:
+    """Calculate n choose r."""
+    if r > n or r < 0:
+        return 0
+    return factorial(n) // (factorial(r) * factorial(n - r))
