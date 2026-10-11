@@ -29,3 +29,14 @@ def sieve_of_eratosthenes(limit: int) -> list[int]:
             for j in range(i * i, limit + 1, i):
                 is_p[j] = False
     return [i for i, p in enumerate(is_p) if p]
+
+def gcd(a: int, b: int) -> int:
+    """Calculate greatest common divisor."""
+    while b:
+        a, b = b, a % b
+    return a
+
+
+def lcm(a: int, b: int) -> int:
+    """Calculate least common multiple."""
+    return abs(a * b) // gcd(a, b)
