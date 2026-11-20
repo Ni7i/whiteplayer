@@ -40,3 +40,14 @@ def gcd(a: int, b: int) -> int:
 def lcm(a: int, b: int) -> int:
     """Calculate least common multiple."""
     return abs(a * b) // gcd(a, b)
+
+def gcd(a: int, b: int) -> int:
+    """Calculate greatest common divisor."""
+    while b:
+        a, b = b, a % b
+    return a
+
+
+def lcm(a: int, b: int) -> int:
+    """Calculate least common multiple."""
+    return abs(a * b) // gcd(a, b)
